@@ -11,8 +11,8 @@ let productPrice = JSON.parse(localStorage.getItem("Price")) || 0;
 
 let menDataDiv = document.getElementById("menProducts");
 function renderMenData(data) {
-    menDataDiv.innerHTML = null;
 
+    menDataDiv.innerHTML = null;
 
     data.forEach((ele) => {
         let items = document.createElement("div");
