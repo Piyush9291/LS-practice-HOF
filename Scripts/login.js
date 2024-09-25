@@ -5,36 +5,68 @@ navbar_div.innerHTML = navbar();
 
 let signupForm = JSON.parse(localStorage.getItem("userdata")) || [];
 
-let form = document.querySelector("form")
-form.addEventListener("submit" , (event) => {
-    event.preventDefault()
+// let form = document.querySelector("form")
+// form.addEventListener("submit" , (event) => {
+//     event.preventDefault()
 
+//     let obj = {
+//         email : form.email.value,
+//         password : form.password.value
+//     }
+    
+   
+//     signupForm.forEach((ele) => {
+        
+//         if(ele.email != obj.email && ele.password != obj.password){
+//             alert("user not found")
+//         }
+         
+//         if(ele.email != obj.email && ele.password == obj.password){
+//             alert("please check your email")
+//         }
+
+//         if(ele.email == obj.email && ele.password != obj.password){
+//             alert("wrong password")
+//         }
+
+//         if(ele.email == obj.email && ele.password == obj.password){
+//             alert("Login sucssfully")
+//             localStorage.setItem("Login", JSON.stringify(ele));
+//             window.location.href = "index.html"
+//         }
+//     });
+
+// });
+
+let form = document.querySelector("form")
+
+form.addEventListener("submit" , (event) =>{
+    event.preventDefault()
+ 
     let obj = {
         email : form.email.value,
         password : form.password.value
+
     }
-    
-   
-    signupForm.forEach((ele) => {
-        
+
+    signupForm.forEach((ele) =>{
+
         if(ele.email != obj.email && ele.password != obj.password){
             alert("user not found")
         }
          
-        if(ele.email != obj.email && ele.password == obj.password){
-            alert("please check your email")
+        if(ele.email != obj.email && ele.password == obj.password){  
+            alert("plzz check your email")
         }
-
+        
         if(ele.email == obj.email && ele.password != obj.password){
-            alert("wrong password")
+            alert("plzz check your password")
         }
-
+           
         if(ele.email == obj.email && ele.password == obj.password){
-            alert("Login sucssfully")
+            alert("login sucssfully")
             localStorage.setItem("Login", JSON.stringify(ele));
-            window.location.href = "index.html"
+             window.location.href = "index.html"
         }
-    });
-
-});
-
+    })
+})

@@ -40,7 +40,7 @@ function renderMenData(data) {
             addBtn.innerText = "Added to cart";
             document.getElementById("cartCount").innerText = cartLS.length
             localStorage.setItem("Cart", JSON.stringify(cartLS));
-            productPrice += ele.price;
+            productPrice += Number(ele.price);
             localStorage.setItem("Price", JSON.stringify(productPrice));
         }
 
@@ -67,64 +67,64 @@ document.getElementById("sortHL").addEventListener("click", () => {
 
 
 
-// let mendetarr = productData.menClothingData;
-// console .log(mendetarr)
+// // let mendetarr = productData.menClothingData;
+// // console .log(mendetarr)
 
-// let cartls = JSON.parse(localStorage.getItem("cart")) || []
-// let productprice = JSON.parse(localStorage.getItem('price'))
+// // let cartls = JSON.parse(localStorage.getItem("cart")) || []
+// // let productprice = JSON.parse(localStorage.getItem('price'))
 
-// let mendetadiv = document.getElementById('menProducts')
+// // let mendetadiv = document.getElementById('menProducts')
 
-// function rendermandeta(data){
+// // function rendermandeta(data){
 
-//     data.forEach((ele) => {
+// //     data.forEach((ele) => {
         
-//         let items = document.createElement('items')
-//         items.className = "items"
+// //         let items = document.createElement('items')
+// //         items.className = "items"
 
-//         let images = document.createElement('img')
-//         images.src = ele.img;
-//         images.onclick = () => {
-//         window.location.href = "productpage.html"
-//         localStorage.setItem("products", JSON.stringify(ele))
-//         }
+// //         let images = document.createElement('img')
+// //         images.src = ele.img;
+// //         images.onclick = () => {
+// //         window.location.href = "productpage.html"
+// //         localStorage.setItem("products", JSON.stringify(ele))
+// //         }
 
-//         let brand = document.createElement('p')
-//         brand.innerText = ele.brand
+// //         let brand = document.createElement('p')
+// //         brand.innerText = ele.brand
 
-//         let title = document.createElement('h2')
-//         title.innerText = ele.title
+// //         let title = document.createElement('h2')
+// //         title.innerText = ele.title
 
-//         let price = document.createElement('price')
-//         price.innerText = `price :₹${ele.price} `
+// //         let price = document.createElement('price')
+// //         price.innerText = `price :₹${ele.price} `
 
-//         let addbtn = document.createElement("button")
-//         addbtn.innerText = "Add to card"
-//         addbtn.onclick = () =>{
-//         cartls.push(ele)
-//         addbtn.innerText = "Added to cart"
-//         document.getElementById("cartCount").innerText = cartls.length
-//         productprice.price += ele.price
-//         localStorage.setItem('price', JSON.stringify("productprice"))
-//         }
+// //         let addbtn = document.createElement("button")
+// //         addbtn.innerText = "Add to card"
+// //         addbtn.onclick = () =>{
+// //         cartls.push(ele)
+// //         addbtn.innerText = "Added to cart"
+// //         document.getElementById("cartCount").innerText = cartls.length
+// //         productprice.price += ele.price
+// //         localStorage.setItem('price', JSON.stringify("productprice"))
+// //         }
 
-//         items.append(images , brand , title , price , addbtn)
-//         mendetadiv.append(items);
-//     });
-// }
+// //         items.append(images , brand , title , price , addbtn)
+// //         mendetadiv.append(items);
+// //     });
+// // }
 
-// rendermandeta(mendetarr)
+// // rendermandeta(mendetarr)
 
-// document.getElementById('allProducts').addEventListener('click', () =>{
-//      return rendermandeta(mendetarr)
-// })
+// // document.getElementById('allProducts').addEventListener('click', () =>{
+// //      return rendermandeta(mendetarr)
+// // })
 
-// document.getElementById('sortLH').addEventListener('click' , () =>{
-//     let sorted = mendetarr((a,b) => a.price - b.price) 
-//     rendermandeta(sorted)
-// })
+// // document.getElementById('sortLH').addEventListener('click' , () =>{
+// //     let sorted = mendetarr((a,b) => a.price - b.price) 
+// //     rendermandeta(sorted)
+// // })
 
-// document.getElementById('sortHL').addEventListener('click' , () =>{
-//     let sorted = mendetarr((a,b) => b.price - a.price) 
-//     rendermandeta(sorted)
-// })
+// // document.getElementById('sortHL').addEventListener('click' , () =>{
+// //     let sorted = mendetarr((a,b) => b.price - a.price) 
+// //     rendermandeta(sorted)
+// // })
